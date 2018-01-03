@@ -41,6 +41,8 @@
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba5671184afd5?w=84&h=95&f=png&s=9005)
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba2ceabbccf48?w=500&h=316&f=png&s=86463)
 
+## 运行项目
+
     git clone https://github.com/czero1995/Node-Koa2-RESTful.git
     cd Node-Koa2-RESTful
     npm install
