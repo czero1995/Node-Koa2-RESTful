@@ -8,13 +8,16 @@
 
 #### MongoDB安装和连接细节(Window)
 * 下载
+
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba5b00357a37d?w=500&h=269&f=png&s=82114)
 
 * 打开下载的安装包，进行安装操作，我是安装在我电脑的E盘下的mogodb文件夹下
 * 选择安装的路径
+
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba5bd914f3b83?w=500&h=388&f=jpeg&s=34245)
 
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba5c0df92bbca?w=500&h=391&f=jpeg&s=45105)
+
 * 新建一个文件夹作为数据数据库存放地址--mongodb/db
 * 在安装的目录下(E:\mogodb\bin\)右键-在此处打开Powershell窗口-在窗口内执行以下命令
 
@@ -39,6 +42,7 @@
  如图:
 
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba5671184afd5?w=84&h=95&f=png&s=9005)
+
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba2ceabbccf48?w=500&h=316&f=png&s=86463)
 
 ## 运行项目
@@ -51,6 +55,7 @@
  在项目路径下运行node app.js
  运行成功如图:
 
+
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba576718ef776?w=313&h=26&f=png&s=816)
 
  然后再postman里面看看接口是否可以使用
@@ -58,10 +63,12 @@
  ## 注册用户:
     
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba57f1d0ca075?w=500&h=190&f=png&s=45965)
- 如果手机号已经在数据库:
+
+ ### 如果手机号已经在数据库:
 
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba58460efdc19?w=500&h=170&f=png&s=40106)
- 看数据库里的内容
+
+ ### 看数据库里的内容
 
 ![](https://user-gold-cdn.xitu.io/2018/1/3/160ba587a5821874?w=500&h=303&f=png&s=103626)
 
