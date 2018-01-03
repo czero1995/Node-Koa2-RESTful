@@ -1,13 +1,7 @@
-'use strict'
-
 var mongoose =  require('mongoose')
 var User = mongoose.model('User')
 
-/**
- * 通过电话号码查询
- * @param  {[type]} options.phoneNumber [description]
- * @return {[type]}                     [description]
- */
+// 通过电话号码查询
 exports.findByPhoneNumber = async ({phoneNumber}) => {
 	var query = User.find({phoneNumber})
 	var res = null
@@ -18,14 +12,10 @@ exports.findByPhoneNumber = async ({phoneNumber}) => {
 			res = user
 		}
 	})
-	// console.log('res====>' + res)
 	return res;
 }
 
-/**
- * 查找所用用户
- * @return {[type]} [description]
- */
+// 查找所用用户
 exports.findAllUsers = async () => {
 	var query = User.find({});
 	var res = []
@@ -39,21 +29,13 @@ exports.findAllUsers = async () => {
 	return res
 }
 
-/**
- * 增加用户
- * @param  {[User]} user [mongoose.model('User')]
- * @return {[type]}      [description]
- */
+// 增加用户
 exports.addUser = async (user) => {
 	user = await user.save()
 	return user
 }
 
-/**
- * 删除用户
- * @param  {[type]} options.phoneNumber [description]
- * @return {[type]}                     [description]
- */
+// 删除用户
 exports.deleteUser = async ({phoneNumber}) => {
 	var flag = false
 	await User.remove({phoneNumber}, function(err) {

@@ -1,14 +1,12 @@
-'use strict'
 var xss = require('xss')
-// 用于封装controllers的公共方法
 
+/*用于封装controllers的公共方法*/
 var mongoose = require('mongoose')
 var uuid = require('uuid')
 var User = mongoose.model('User')
 
 exports.hasBody = async (ctx, next) => {
   var body = ctx.request.body || {}
-  // console.log(this.query.phonenumber)
   console.log(body)
 
   if (Object.keys(body).length === 0) {

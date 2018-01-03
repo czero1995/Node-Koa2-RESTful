@@ -1,5 +1,3 @@
-'use strict'
-
 var xss = require('xss')
 var mongoose =  require('mongoose')
 var User = mongoose.model('User')
@@ -7,11 +5,7 @@ var uuid = require('uuid')
 // var userHelper = require('../dbhelper/userHelper')
 import userHelper from '../dbhelper/userHelper'
 
-/**
- * 注册新用户
- * @param {Function} next          [description]
- * @yield {[type]}   [description]
- */
+// 注册新用户
 exports.signup = async (ctx, next) => {
 	var phoneNumber = xss(ctx.request.body.phoneNumber.trim())
   var nickname = xss(ctx.request.body.nickname.trim())
@@ -27,7 +21,7 @@ exports.signup = async (ctx, next) => {
 
 	  user = new User({
 	    nickname: xss(nickname),
-	    avatar: 'http://upload-images.jianshu.io/upload_images/5307186-eda1b28e54a4d48e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+	    avatar: 'http://avator.png',
 	    phoneNumber: xss(phoneNumber),
 	    verifyCode: verifyCode,
 	    accessToken: accessToken
@@ -60,12 +54,7 @@ exports.signup = async (ctx, next) => {
 
 }
 
-/**
- * 更新用户信息操作
- * @param  {[type]}   ctx  [description]
- * @param  {Function} next [description]
- * @return {[type]}        [description]
- */
+// 更新用户信息操作
 exports.update = async (ctx, next) => {
   var body = ctx.request.body
   var user = ctx.session.user
@@ -95,17 +84,16 @@ exports.update = async (ctx, next) => {
 
 
 
-
+/*获取所有用户*/
 exports.users = async (ctx, next) => {
   var data = await userHelper.findAllUsers()
-  // var obj = await userHelper.findByPhoneNumber({phoneNumber : '13525584568'})
-  // console.log('obj=====================================>'+obj)
-  
   ctx.body = {
     success: true,
     data
   }
 }
+
+/*删除某个用户*/
 
 exports.deleteUser = async (ctx, next) => {
   var phoneNumber = xss(ctx.request.body.phoneNumber)
